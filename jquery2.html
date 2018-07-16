@@ -1,0 +1,24 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script> 
+    <metaname="viewport"content="width=device-width">
+    <title>How to detect a textbox's content has changed using jQuery</title>
+</head>
+<body>
+    <form action="#">
+        Firstname: <input type="text" id="name"name="fname"><br>
+        Lastname: <input type="text" id="name"name="lname"><br>
+        <input type="submit" value="Submit">
+     </form>
+</body>
+<script>
+    $(document).ready(function() {
+        $('input[type="text"]').change(function(){
+              console.log($(this).attr('name') +" value changed");
+              alert($(this).attr('name') +" value changed")
+
+        });
+    });
+</script>
+</html>

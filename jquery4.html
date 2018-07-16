@@ -1,0 +1,32 @@
+<!DOCTYPEhtml>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <meta name="viewport" content="width=device-width">
+        <title>Add options to a drop-down list using jQuery.</title>
+</head>
+<body>
+    <p>ListofColors:</p>
+    <select id='myColors'>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+    </select>
+</body>
+<script>
+       $(document).ready(function () {
+            var myOptions = {
+                val1: 'Lavender',
+                val2: 'Purple'
+            };
+            var mySelect = $('#myColors');
+            $.each(myOptions, function (val, text) {
+                mySelect.append(
+                    $('<option></option>').val(val).html(text)
+                );
+            });
+        });
+</script>
+
+</html>
